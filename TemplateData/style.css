@@ -1,10 +1,10 @@
 * { box-sizing: border-box; }
-html, body { width: 100%; height: 100%; padding: 0; margin: 0; overflow: hidden; background: #fff; }
+html, body { width: 100%; height: 100%; min-height: 100dvh; padding: 0; margin: 0; overflow: hidden; background: #fff; }
 
 #unity-container { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #fff; }
-#unity-container.unity-vertical-layout { width: min(100vw, 56.25vh); height: min(100vh, 177.78vw); }
-#unity-container.unity-portrait-fullscreen { position: fixed; inset: 0; width: 100%; height: 100%; transform: none; }
-#unity-canvas { display: block; width: 100%; height: calc(100% - 38px); background: #fff; }
+#unity-container.unity-vertical-layout { width: min(100vw, 75vh); height: min(100dvh, 133.333vw); }
+#unity-container.unity-portrait-fullscreen { position: fixed; inset: 0; width: 100vw; height: 100dvh; transform: none; }
+#unity-canvas { display: block; width: 100%; height: 100%; background: #fff; }
 .unity-portrait-fullscreen #unity-canvas { width: 100%; height: 100%; }
 
 #unity-loading-bar { position: fixed; inset: 0; z-index: 10; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 18px; background: #fff; }
@@ -12,8 +12,4 @@ html, body { width: 100%; height: 100%; padding: 0; margin: 0; overflow: hidden;
 #unity-progress-bar-empty { width: 180px; height: 8px; overflow: hidden; border-radius: 999px; background: #e7eaf0; }
 #unity-progress-bar-full { width: 0%; height: 100%; border-radius: inherit; background: #001f5b; transition: width 120ms linear; }
 
-#unity-footer { position: absolute; right: 0; bottom: 0; left: 0; height: 38px; background: #fff; }
-.unity-portrait-fullscreen #unity-footer { display: none; }
-#unity-build-title { float: left; margin-left: 10px; line-height: 38px; color: #001f5b; font: 14px/38px Arial, sans-serif; }
-#unity-fullscreen-button { float: right; width: 38px; height: 38px; cursor: pointer; background: url('fullscreen-button.png') no-repeat center; }
 #unity-warning { position: absolute; z-index: 20; top: 5%; left: 50%; transform: translateX(-50%); padding: 10px; background: #fff; }
